@@ -877,7 +877,6 @@
 
 //
 // Add the G35 command to read bed corners to help adjust screws. Requires a bed probe.
-// ANCHOR: Este podría ser el problema
 //
 #define ASSISTED_TRAMMING
 #if ENABLED(ASSISTED_TRAMMING)
@@ -1214,8 +1213,7 @@
   #endif
 
   // Insert a menu for preheating at the top level to allow for quick access
-  //#define PREHEAT_SHORTCUT_MENU_ITEM
-  // ANCHOR: Quiero activar esto
+  #define PREHEAT_SHORTCUT_MENU_ITEM
 
 #endif // HAS_LCD_MENU
 
@@ -2688,8 +2686,6 @@
   //#define E6_SLAVE_ADDRESS 0
   //#define E7_SLAVE_ADDRESS 0
 
-  // ANCHOR: Probablemente no sea esto, pero ante la duda...
-
   /**
    * Software enable
    *
@@ -3652,8 +3648,6 @@
  * Cancel Objects
  *
  * Implement M486 to allow Marlin to skip objects
- * 
- * ANCHOR: Quiero ver qué onda
  */
 //#define CANCEL_OBJECTS
 #if ENABLED(CANCEL_OBJECTS)
