@@ -1029,7 +1029,6 @@
 
 //
 // Add the G35 command to read bed corners to help adjust screws. Requires a bed probe.
-// ANCHOR: Este podría ser el problema
 //
 //#define ASSISTED_TRAMMING
 #if ENABLED(ASSISTED_TRAMMING)
@@ -3883,8 +3882,6 @@
  * Cancel Objects
  *
  * Implement M486 to allow Marlin to skip objects
- * 
- * ANCHOR: Quiero ver qué onda
  */
 //#define CANCEL_OBJECTS
 #if ENABLED(CANCEL_OBJECTS)
