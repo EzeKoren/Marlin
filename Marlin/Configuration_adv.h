@@ -1378,7 +1378,7 @@
 //#define LCD_BACKLIGHT_TIMEOUT_MINS 1  // (minutes) Timeout before turning off the backlight
 
 #if HAS_BED_PROBE && EITHER(HAS_MARLINUI_MENU, HAS_TFT_LVGL_UI)
-  //#define PROBE_OFFSET_WIZARD       // Add a Probe Z Offset calibration option to the LCD menu
+  #define PROBE_OFFSET_WIZARD       // Add a Probe Z Offset calibration option to the LCD menu
   #if ENABLED(PROBE_OFFSET_WIZARD)
     /**
      * Enable to init the Probe Z-Offset when starting the Wizard.
@@ -1492,11 +1492,11 @@
 #endif // HAS_DISPLAY || DWIN_LCD_PROUI
 
 // Add 'M73' to set print job progress, overrides Marlin's built-in estimate
-//#define SET_PROGRESS_MANUALLY
+#define SET_PROGRESS_MANUALLY
 #if ENABLED(SET_PROGRESS_MANUALLY)
   #define SET_PROGRESS_PERCENT            // Add 'P' parameter to set percentage done
   #define SET_REMAINING_TIME              // Add 'R' parameter to set remaining time
-  //#define SET_INTERACTION_TIME          // Add 'C' parameter to set time until next filament change or other user interaction
+  #define SET_INTERACTION_TIME          // Add 'C' parameter to set time until next filament change or other user interaction
   //#define M73_REPORT                    // Report M73 values to host
   #if BOTH(M73_REPORT, SDSUPPORT)
     #define M73_REPORT_SD_ONLY            // Report only when printing from SD
@@ -1507,7 +1507,7 @@
 #if HAS_DISPLAY && EITHER(SDSUPPORT, SET_PROGRESS_MANUALLY)
   #define SHOW_PROGRESS_PERCENT           // Show print progress percentage (doesn't affect progress bar)
   #define SHOW_ELAPSED_TIME               // Display elapsed printing time (prefix 'E')
-  //#define SHOW_REMAINING_TIME           // Display estimated time to completion (prefix 'R')
+  #define SHOW_REMAINING_TIME           // Display estimated time to completion (prefix 'R')
   #if ENABLED(SET_INTERACTION_TIME)
     #define SHOW_INTERACTION_TIME         // Display time until next user interaction ('C' = filament change)
   #endif
