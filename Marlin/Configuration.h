@@ -1202,7 +1202,7 @@
  * Override with M92
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 204.2, 201, 811.3, 228 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 204.2, 201, 811.3, 190 }
 
 /**
  * Default Max Feed Rate (linear=mm/s, rotational=°/s)
@@ -1211,7 +1211,7 @@
  */
 #define DEFAULT_MAX_FEEDRATE          { 400, 400, 8, 50 }
 
-//#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
+#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
   #define MAX_FEEDRATE_EDIT_VALUES    { 600, 600, 10, 50 } // ...or, set your own edit limits
 #endif
